@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from "./components/Navbar";
+import Container1 from "./components/Container1";
+import Container2 from "./components/Container2";
+import Container3 from "./components/Container3";
+import Container4 from "./components/Container4";
+import Footer from "./components/Footer";
+// import Blog from "./components/Blog";
+import { useState } from "react";
+
 
 function App() {
+  const [mode, setMode] = useState("light"); //whether dark mode is enabled or not
+ 
+  const togglemode = ()=>{
+      if(mode === "light"){
+        setMode("dark");
+        document.body.style.backgroundColor='rgb(17 6 94)';
+      }
+      else{
+        setMode("light");
+        document.body.style.backgroundColor='white';
+      }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar mode={mode} togglemode={togglemode}/>
+      <Container1 mode={mode}/>
+      <Container2 mode={mode}/>
+      <Container3/>
+      <Container4 mode={mode}/>
+      {/* <Blog mode={mode}/> */}
+      <Footer/>
+    </>
   );
 }
 

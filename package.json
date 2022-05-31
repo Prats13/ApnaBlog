@@ -1,5 +1,6 @@
 {
-  "name": "app1",
+  "homepage": "https://Prats.github.io/apnablog",
+  "name": "apnablog",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
