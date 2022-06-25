@@ -16,12 +16,23 @@
     /* background-color: rgb(232, 189, 114); */
     background-color: white;
 }
-.grid-c3i-1{
+.grid-c3ia-1{
     grid-column: 1/2;
     grid-row: 1;
     height: 270px;
     width: 270px;
     margin-left: 4px;
+    background: url('/public/image7.jpg') no-repeat;
+    background-size: 100%;
+}
+.grid-c3ib-1{
+    grid-column: 1/2;
+    grid-row: 1;
+    height: 270px;
+    width: 270px;
+    margin-left: 4px;
+    background: url('/public/image8.jpg') no-repeat;
+    background-size: 100%;
 }
 .grid-c3i-2{
     grid-column: 2/3;

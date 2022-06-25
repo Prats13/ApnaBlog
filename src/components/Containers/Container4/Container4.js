@@ -6,7 +6,7 @@ export default function Container4() {
         <>
             <div className="flexbox-cont4">
                 <div className="flexbox-item flexbox-c4i-1">
-                    <img src="/img4.jpg" className="grid-item grid-c4i-1" alt="" />
+                    <div className="grid-item grid-c4ia-1"/>
                     <div className="grid-item grid-c4i-2">
                         <i className="fa-solid fa-circle-user" id="uicon"></i>
                         <p className='c4p1'>
@@ -25,7 +25,7 @@ export default function Container4() {
                     </div>
                 </div>
                 <div className="flexbox-item flexbox-c4i-2">
-                    <img src="/img5.jpg" className="grid-item grid-c4i-1" alt="" />
+                    <div className="grid-item grid-c4ib-1"/>
                     <div className="grid-item grid-c4i-2">
                         <i className="fa-solid fa-circle-user" id="uicon"></i>
                         <p className='c4p1'>
@@ -44,7 +44,7 @@ export default function Container4() {
                     </div>
                 </div>
                 <div className="flexbox-item flexbox-c4i-3">
-                    <img src="/img6.jpg" className="grid-item grid-c4i-1" alt="" />
+                    <div className="grid-item grid-c4ic-1"/>
                     <div className="grid-item grid-c4i-2">
                         <i className="fa-solid fa-circle-user" id="uicon"></i>
                         <p className='c4p1'>

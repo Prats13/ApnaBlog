@@ -16,11 +16,29 @@
 .grid-item{
     /* border: 1px solid red; */
 }
-.grid-c4i-1{
+.grid-c4ia-1{
     grid-column: 1/2;
     grid-row: 1/6;
     height: 337px;
     width: 540px;
+    background: url('/public/img4.jpg') no-repeat;
+    background-size: 100%;
+}
+.grid-c4ib-1{
+    grid-column: 1/2;
+    grid-row: 1/6;
+    height: 337px;
+    width: 540px;
+    background: url('/public/img5.jpg') no-repeat;
+    background-size: 100%;
+}
+.grid-c4ic-1{
+    grid-column: 1/2;
+    grid-row: 1/6;
+    height: 337px;
+    width: 540px;
+    background: url('/public/img6.jpg') no-repeat;
+    background-size: 100%;
 }
 .grid-c4i-2{
     grid-row: 1/2;
