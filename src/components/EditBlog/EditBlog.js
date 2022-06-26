@@ -6,12 +6,10 @@ import 'quill/dist/quill.snow.css';
 import axios from 'axios';
 
 
-export default function EditBlog() {
+export default function EditBlog(props) {
   const params = useParams();
-  // const navigate = useNavigate();
 
   const [state, setState] = useState({ title: '', blog_desc: '', blog_text: '' });
-  // const [editState,setEditState] = useState();
 
   const { quill, quillRef } = useQuill();
 
@@ -60,7 +58,7 @@ export default function EditBlog() {
       .catch(err => {
         console.log("Error in UpdateBookInfo!");
       })
-    return;
+
   };
 
   return (

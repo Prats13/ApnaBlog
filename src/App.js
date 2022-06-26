@@ -17,10 +17,12 @@ import Blogs from "./components/BlogsPage/Blogs";
 import Singleblog from './components/SingleBlog/Singleblog';
 import EditBlog from './components/EditBlog/EditBlog';
 import DeleteBlog from './components/DeleteBlog/DeleteBlog';
+import Alert from "./components/Alert";
 
 
 function App() {
   const [mode, setMode] = useState("light"); //whether dark mode is enabled or not
+  const [alert, setAlert] = useState(null);
 
   const togglemode = () => {
     if (mode === "light") {
@@ -32,9 +34,19 @@ function App() {
       document.body.style.backgroundColor = 'white';
     }
   }
+  const setAlarm =(message,type)=>{
+    setAlert({
+      msg:message,
+      type:type
+    })
+    setTimeout(() => {
+      setAlert(null);
+    }, 1500);
+}
   return (
     <Router>
         <Navbar mode={mode} togglemode={togglemode} />
+        <Alert alert={alert}/>
         <Routes>
           {/* <Route path="/about">
             <About />
@@ -58,7 +70,7 @@ function App() {
           <Route exact path="/blogs" element={<Blogs/>}/>
           <Route exact path="/show-blog/:id" element={<Singleblog/>}/>
           <Route exact path="/show-blog/:id/edit_blog" element={<EditBlog/>}/>
-          <Route exact path="/show-blog/:id/delete_blog" element={<DeleteBlog/>}/>
+          <Route exact path="/show-blog/:id/delete_blog" element={<DeleteBlog setAlarm={setAlarm}/>}/>
         </Routes>
       </Router>
   ); 
